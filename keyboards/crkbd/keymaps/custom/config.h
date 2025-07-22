@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
 #define SPLIT_USB_DETECT
+#define MASTER_LEFT
 
 // #ifdef RGBLIGHT_ENABLE
 //     #define RGBLIGHT_EFFECT_BREATHING
@@ -48,12 +49,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #   define RGB_MATRIX_KEYRELEASES // reacts to keyreleases (instead of keypresses)
 #   define RGB_MATRIX_SLEEP // turn off effects when suspended
 #   define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#    define ENABLE_RGB_MATRIX_SOLID_COLOR
 // #   define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
 // #   define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
-#    define RGB_MATRIX_HUE_STEP 8
-#    define RGB_MATRIX_SAT_STEP 8
-#    define RGB_MATRIX_VAL_STEP 8
+#    define RGB_MATRIX_HUE_STEP 4
+#    define RGB_MATRIX_SAT_STEP 4
+#    define RGB_MATRIX_VAL_STEP 4
 #    define RGB_MATRIX_SPD_STEP 10
+#    define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_COLOR
+#    define RGB_MATRIX_DEFAULT_HUE 190
+#    define RGB_MATRIX_DEFAULT_SAT 255
+#    define RGB_MATRIX_DEFAULT_VAL 50
+#    define RGB_MATRIX_TYPING_HEATMAP_SLIM
 
 /* Enable the animations you want/need.  You may need to enable only a small number of these because       *
  * they take up a lot of space.  Enable and confirm that you can still successfully compile your firmware. */
@@ -61,8 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
 // #    define ENABLE_RGB_MATRIX_NONE
-// #    define ENABLE_RGB_MATRIX_SOLID_COLOR
-#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+
+// #    define ENABLE_RGB_MATRIX_ALPHAS_MODS
 // #    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 // #    define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 // #    define ENABLE_RGB_MATRIX_BREATHING
@@ -92,7 +99,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #    define ENABLE_RGB_MATRIX_PIXEL_FLOW
 // #    define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
-// #    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+#    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 // #    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 // enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined
 // #    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE

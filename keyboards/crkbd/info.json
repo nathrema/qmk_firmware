@@ -1,9 +1,7 @@
 {
-    "manufacturer": "foostan",
-    "url": "https://github.com/foostan/crkbd",
-    "maintainer": "qmk",
+    "manufacturer": "Apple Inc.",
     "usb": {
-        "vid": "0x4653"
+        "vid": "0x05AC"
     },
     "features": {
         "bootmagic": true,

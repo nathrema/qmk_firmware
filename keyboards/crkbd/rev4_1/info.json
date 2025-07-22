@@ -1,9 +1,8 @@
 {
-    "maintainer": "foostan",
-    "manufacturer": "foostan",
-    "url": "https://github.com/foostan/crkbd",
+    "manufacturer": "Apple Inc.",
     "usb": {
-        "vid": "0x4653",
+        "vid": "0x05AC",
+        "pid": "0x0250",
         "suspend_wakeup_delay": 200,
         "device_version": "4.1.0"
     },
