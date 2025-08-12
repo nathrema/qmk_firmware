@@ -1,3 +1,2 @@
 cd keyboards/crkbd/keymaps/custom
-qmk json2c import.json > keymap.c
 qmk flash -kb crkbd/rev4_1/standard -km custom
