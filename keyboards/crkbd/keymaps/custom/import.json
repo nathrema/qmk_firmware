@@ -21,7 +21,7 @@
       "KC_U",
       "KC_COMM",
       "KC_EQL",
-      "KC_COPY",
+      "LCTL(KC_V)",
       "KC_N",
       "KC_S",
       "KC_H",
