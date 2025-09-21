@@ -1,0 +1,184 @@
+"macros": [
+    [
+        { "action": "tap", "keycodes": ["LGUI", "G"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "O"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "U"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "COMM"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "C"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "A"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "E"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "I"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "W"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "SCLN"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "SLSH"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "DOT"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "SPC"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [],
+    [],
+    [],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "B"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "L"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "F"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "K"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "N"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "S"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "H"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "T"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "P"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "V"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "J"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "D"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "R"] },
+        {"action": "delay", "duration": 50},
+        { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ]
+],
+    
+[
+    "KC_NO",
+    "ANY(QK_MACRO_19)", b 5
+    "ANY(QK_MACRO_18)", f 6
+    "ANY(QK_MACRO_17)", l 7
+    "ANY(QK_MACRO_16)", k 8
+    "KC_NO",
+    "KC_NO",
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_0)", g 8
+    "ANY(QK_MACRO_1)", o 7
+    "ANY(QK_MACRO_2)", u 6
+    "ANY(QK_MACRO_3)", comma 5
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_23)", n 1
+    "ANY(QK_MACRO_22)", s 2
+    "ANY(QK_MACRO_21)", h 3
+    "ANY(QK_MACRO_20)", t 4
+    "KC_NO",
+    "KC_NO",
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_4)", c 4
+    "ANY(QK_MACRO_5)", a 3
+    "ANY(QK_MACRO_6)", e 2
+    "ANY(QK_MACRO_7)", i 1
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_27)", p 9
+    "ANY(QK_MACRO_26)", v 10
+    "ANY(QK_MACRO_25)", j 11
+    "ANY(QK_MACRO_24)", d 12
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_8)", w 12
+    "ANY(QK_MACRO_9)", semicolon 11
+    "ANY(QK_MACRO_10)", slash 10
+    "ANY(QK_MACRO_11)", period  9
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_28)", r 13
+    "KC_NO",
+    "KC_NO",
+    "ANY(QK_MACRO_12)", space 13
+    "KC_NO"
+  ]
