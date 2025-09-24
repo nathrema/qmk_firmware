@@ -1,136 +1,153 @@
 "macros": [
     [
         { "action": "tap", "keycodes": ["LGUI", "G"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "O"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "U"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "COMM"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "C"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "A"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "E"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "I"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "W"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "SCLN"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "SLSH"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "DOT"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "SPC"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "V"] }
     ],
-    [],
-    [],
-    [],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "QUOT"] },
+        {"action": "delay", "duration": 110},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "Y"] },
+        {"action": "delay", "duration": 110},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "X"] },
+        {"action": "delay", "duration": 110},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
+    ],
     [
         { "action": "tap", "keycodes": ["LGUI", "B"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "L"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "F"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "K"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "N"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "S"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "H"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "T"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "P"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "V"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "J"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "D"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
     ],
     [
         { "action": "tap", "keycodes": ["LGUI", "R"] },
-        {"action": "delay", "duration": 50},
+        {"action": "delay", "duration": 110},
         { "action": "tap", "keycodes": ["LCTL", "C"] }
+    ],
+    [
+        { "action": "tap", "keycodes": ["LGUI", "ENT"] },
+        {"action": "delay", "duration": 110},
+        { "action": "tap", "keycodes": ["LCTL", "V"] }
     ]
 ],
     
