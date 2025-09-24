@@ -5,158 +5,6 @@
   "keyboard": "crkbd/rev4_0/standard",
   "keymap": "crkbd_rev4_0_standard_layout_split_3x6_3_ex2_2025-07-08",
   "layout": "LAYOUT_split_3x6_3_ex2",
-  "macros": [
-    [
-        { "action": "tap", "keycodes": ["LGUI", "G"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "O"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "U"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "COMM"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "C"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "A"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "E"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "I"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "W"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "SCLN"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "SLSH"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "DOT"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "SPC"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "QUOT"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "Y"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "X"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "V"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "B"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "L"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "F"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "K"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "N"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "S"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "H"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "T"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "P"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "V"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "J"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "D"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "R"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ],
-    [
-        { "action": "tap", "keycodes": ["LGUI", "ENT"] },
-        {"action": "delay", "duration": 110},
-        { "action": "tap", "keycodes": ["LCTL", "C"] }
-    ]
-],
   "layers": [
     [
       "KC_GRV",
@@ -496,10 +344,10 @@
     ],
     [
       "LGUI(KC_GRV)",
-      "ANY(QK_MACRO_19)",
-      "ANY(QK_MACRO_18)",
-      "ANY(QK_MACRO_17)",
       "ANY(QK_MACRO_16)",
+      "ANY(QK_MACRO_17)",
+      "ANY(QK_MACRO_18)",
+      "ANY(QK_MACRO_19)",
       "LGUI(KC_Z)",
       "KC_NO",
       "KC_NO",
@@ -510,10 +358,10 @@
       "ANY(QK_MACRO_3)",
       "RGUI(KC_EQL)",
       "LGUI(KC_TAB)",
-      "ANY(QK_MACRO_23)",
-      "ANY(QK_MACRO_22)",
-      "ANY(QK_MACRO_21)",
       "ANY(QK_MACRO_20)",
+      "ANY(QK_MACRO_21)",
+      "ANY(QK_MACRO_22)",
+      "ANY(QK_MACRO_23)",
       "LGUI(KC_M)",
       "KC_NO",
       "KC_NO",
@@ -524,10 +372,10 @@
       "ANY(QK_MACRO_7)",
       "KC_NO",
       "LGUI(KC_BSLS)",
-      "ANY(QK_MACRO_27)",
-      "ANY(QK_MACRO_26)",
-      "ANY(QK_MACRO_25)",
       "ANY(QK_MACRO_24)",
+      "ANY(QK_MACRO_25)",
+      "ANY(QK_MACRO_26)",
+      "ANY(QK_MACRO_27)",
       "LGUI(KC_Q)",
       "ANY(QK_MACRO_13)",
       "ANY(QK_MACRO_8)",
