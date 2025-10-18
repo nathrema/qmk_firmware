@@ -25,6 +25,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define QUICK_TAP_TERM 0
 #define TAPPING_TERM 150
 #define SPLIT_USB_DETECT
+
+#define MK_3_SPEED
+#define MK_MOMENTARY_ACCEL
+#define MK_C_OFFSET_UNMOD 2
+#define MK_C_INTERVAL_UNMOD 4
+#define MK_C_OFFSET_2 20
+#define MK_C_INTERVAL_2 16
+
 // #define PERMISSIVE_HOLD
 // #define HOLD_ON_OTHER_KEY_PRESS
 
