@@ -4,8 +4,8 @@
 #endif
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_split_3x6_3_ex2(KC_GRV, KC_B, KC_F, KC_L, KC_K, KC_Z, KC_VOLU, KC_MPLY, KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_EQL, KC_TAB, LSFT_T(KC_N), LT(7,KC_S), LCTL_T(KC_H), LALT_T(KC_T), LGUI_T(KC_M), KC_VOLD, KC_PSCR, RGUI_T(KC_Y), RALT_T(KC_C), RCTL_T(KC_A), LT(7,KC_E), RSFT_T(KC_I), QK_REP, KC_BSLS, KC_P, KC_V, KC_J, KC_D, KC_Q, KC_QUOT, KC_W, KC_SCLN, KC_SLSH, KC_DOT, KC_MINS, LCTL(KC_V), KC_R, LT(4,KC_BSPC), LT(5,KC_ENT), KC_SPC, LCTL(KC_Z)),
-    [1] = LAYOUT_split_3x6_3_ex2(KC_GRV, KC_B, KC_F, KC_L, KC_K, KC_Z, KC_1, DF(0), KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_EXLM, QK_REP, KC_N, KC_S, KC_H, KC_T, KC_M, KC_2, DF(0), KC_Y, KC_C, KC_A, KC_E, KC_I, QK_REP, KC_BSLS, KC_P, KC_V, KC_J, KC_D, KC_Q, KC_QUOT, KC_W, KC_SCLN, KC_QUES, KC_DOT, KC_MINS, KC_BSPC, KC_R, OS_LCTL, OS_RSFT, KC_SPC, KC_ENT),
+    [0] = LAYOUT_split_3x6_3_ex2(KC_GRV, KC_B, KC_F, KC_L, KC_K, KC_Z, KC_VOLU, KC_MPLY, KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_EQL, KC_TAB, LSFT_T(KC_N), LT(7,KC_S), LCTL_T(KC_H), LALT_T(KC_T), LGUI_T(KC_M), KC_VOLD, KC_PSCR, RGUI_T(KC_Y), RALT_T(KC_C), RCTL_T(KC_A), LT(7,KC_E), RSFT_T(KC_I), KC_BSPC, KC_BSLS, KC_P, KC_V, KC_J, KC_D, KC_Q, KC_QUOT, KC_W, KC_SCLN, KC_SLSH, KC_DOT, KC_MINS, LCTL(KC_V), LT(4,KC_R), QK_REP, RSFT_T(KC_ENT), LT(5,KC_SPC), LCTL(KC_Z)),
+    [1] = LAYOUT_split_3x6_3_ex2(KC_GRV, KC_B, KC_F, KC_L, KC_K, KC_Z, DF(0), KC_MPLY, KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_EQL, KC_TAB, KC_N, KC_S, KC_H, KC_T, KC_M, DF(0), KC_PSCR, KC_Y, KC_C, KC_A, KC_E, KC_I, KC_BSPC, KC_BSLS, KC_P, KC_V, KC_J, KC_D, KC_Q, KC_QUOT, KC_W, KC_SCLN, KC_SLSH, KC_DOT, KC_MINS, LCTL(KC_V), KC_R, QK_REP, KC_ENT, KC_SPC, LCTL(KC_Z)),
     [2] = LAYOUT_split_3x6_3_ex2(KC_GRV, KC_B, KC_F, KC_L, KC_K, KC_Z, KC_1, DF(0), KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_NO, KC_TAB, KC_N, KC_S, KC_H, KC_T, KC_M, KC_2, DF(0), KC_Y, KC_C, KC_A, KC_E, KC_I, KC_NO, KC_BSLS, KC_P, KC_V, KC_J, KC_D, KC_Q, KC_QUOT, KC_W, KC_SCLN, KC_SLSH, KC_DOT, KC_NO, KC_BSPC, KC_R, OSL(3), OS_RSFT, KC_SPC, KC_ENT),
     [3] = LAYOUT_split_3x6_3_ex2(KC_X, KC_G, KC_O, KC_U, KC_COMM, KC_EQL, KC_4, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_Y, KC_C, KC_A, KC_E, KC_I, KC_3, KC_5, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_QUOT, KC_W, KC_SCLN, KC_SLSH, KC_DOT, KC_MINS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_SPC, KC_R, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
     [4] = LAYOUT_split_3x6_3_ex2(KC_ESC, KC_CIRC, KC_PERC, KC_AT, KC_EXLM, KC_TILD, DF(1), MO(6), KC_GRV, KC_BSLS, KC_HASH, KC_DLR, KC_ASTR, KC_DEL, KC_WBAK, KC_LT, KC_LBRC, KC_LCBR, KC_LPRN, KC_AMPR, DF(0), DF(2), KC_PIPE, KC_RPRN, KC_RCBR, KC_RBRC, KC_GT, KC_WFWD, KC_TRNS, KC_7, KC_8, KC_9, KC_0, KC_6, KC_5, KC_1, KC_2, KC_3, KC_4, KC_TRNS, LCTL(KC_C), LCTL(KC_X), KC_TRNS, KC_TRNS, KC_SPC, LCS(KC_Z)),
@@ -31,7 +31,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case QK_MACRO_4:
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_C)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
                 return false;
-            case QK_MACRO_5:
+            // case QK_MACRO_5:
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_A)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
                 return false;
             case QK_MACRO_6:
@@ -45,10 +45,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
             case QK_MACRO_9:
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_SCLN)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
-                return false;
-            case QK_MACRO_10:
-                SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_SLSH)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
-                return false;
+            //     return false;
+            // case QK_MACRO_10:
+            //     SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_SLSH)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
+            //     return false;
             case QK_MACRO_11:
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_DOT)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
                 return false;
@@ -62,9 +62,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_Y)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
                 return false;
             case QK_MACRO_15:
-                SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_X)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
-                return false;
-            case QK_MACRO_16:
+            //     SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_X)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_V)SS_UP(X_LCTL));
+            //     return false;
+            // case QK_MACRO_16:
                 SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_B)SS_UP(X_LGUI)SS_DELAY(110)SS_DOWN(X_LCTL)SS_TAP(X_C)SS_UP(X_LCTL));
                 return false;
             case QK_MACRO_17:
