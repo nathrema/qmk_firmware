@@ -1,7 +1,6 @@
 {
-  "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
-  "notes": "0:night with mods,1:night typing,2:starcraft thecore left-handed,3:starcraft thecore left-handed,4:symbols,5:navigation,6:keyboard",
   "version": 1,
+  "documentation": "This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\n",
   "keyboard": "crkbd/rev4_0/standard",
   "keymap": "crkbd_rev4_0_standard_layout_split_3x6_3_ex2_2025-07-08",
   "layout": "LAYOUT_split_3x6_3_ex2",
@@ -34,7 +33,7 @@
       "RCTL_T(KC_A)",
       "LT(7,KC_E)",
       "RSFT_T(KC_I)",
-      "KC_CAPS",
+      "KC_ESC",
       "KC_BSLS",
       "KC_X",
       "KC_V",
@@ -82,7 +81,7 @@
       "KC_A",
       "KC_E",
       "KC_I",
-      "KC_CAPS",
+      "KC_ESC",
       "KC_BSLS",
       "KC_X",
       "KC_V",
@@ -103,7 +102,7 @@
       "LCTL(KC_Z)"
     ],
     [
-      "KC_ESC",
+      "KC_GRV",
       "KC_Q",
       "KC_E",
       "KC_R",
@@ -130,7 +129,7 @@
       "KC_H",
       "KC_J",
       "KC_K",
-      "KC_CAPS",
+      "KC_ESC",
       "KC_BSLS",
       "KC_Z",
       "KC_X",
@@ -199,7 +198,7 @@
       "KC_NO"
     ],
     [
-      "KC_ESC",
+      "KC_AMPR",
       "KC_LT",
       "KC_LBRC",
       "KC_LCBR",
@@ -247,7 +246,7 @@
       "LCS(KC_Z)"
     ],
     [
-      "KC_ESC",
+      "KC_AMPR",
       "MS_LEFT",
       "MS_DOWN",
       "MS_UP",
@@ -357,7 +356,7 @@
       "ANY(QK_MACRO_2)",
       "ANY(QK_MACRO_3)",
       "RGUI(KC_EQL)",
-      "LGUI(KC_TAB)",
+      "LGUI(KC_BSLS)",
       "ANY(QK_MACRO_20)",
       "ANY(QK_MACRO_21)",
       "ANY(QK_MACRO_22)",
@@ -371,7 +370,7 @@
       "ANY(QK_MACRO_6)",
       "ANY(QK_MACRO_7)",
       "KC_NO",
-      "LGUI(KC_BSLS)",
+      "LGUI(KC_TAB)",
       "ANY(QK_MACRO_24)",
       "ANY(QK_MACRO_25)",
       "ANY(QK_MACRO_26)",
@@ -391,5 +390,6 @@
       "KC_NO"
     ]
   ],
-  "author": "Anonymous"
+  "author": "Anonymous",
+  "notes": "0:night with mods,1:night typing,2:starcraft thecore left-handed,3:starcraft thecore left-handed,4:symbols,5:navigation,6:keyboard"
 }
