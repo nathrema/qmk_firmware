@@ -1,0 +1,68 @@
+// uranium
+    //AK_SND_ONLY_START(KC_N);
+    //R_SND(KC_D, KC_R);
+    //R_SND(KC_R, KC_D);
+
+    //AK_SND_ONLY_START(KC_A);
+    //R_SND(KC_B, KC_E);
+    //R_SND(KC_E, KC_B);
+
+    //AK_SND_ONLY_START(KC_O);
+    //R_SND(KC_COMMA, KC_Y);
+    //R_SND(KC_Y, KC_COMMA);
+
+    //AK_SND_ONLY_START(KC_I);
+    //R_SND(KC_V, KC_W);
+    //R_SND(KC_W, KC_V);
+
+    //AK_SND_ONLY_START(KC_U);
+    //R_SND(KC_I, KC_O);
+    //R_SND(KC_O, KC_I);
+
+// selenium
+//    AK_SND_ONLY_START(KC_A);
+//    R_SND(KC_Y, KC_E);
+//    R_SND(KC_E, KC_Y);
+//
+//    AK_SND_ONLY_START(KC_U);
+//    R_SND(KC_I, KC_O);
+//    R_SND(KC_O, KC_I);
+//
+//    AK_SND_ONLY_START(KC_C);
+//    R_SND(KC_T, KC_M);
+//    R_SND(KC_M, KC_T);
+
+// amber
+//    AK_SND_ONLY_START(KC_A);
+//    R_SND(KC_Y, KC_E);
+//    R_SND(KC_E, KC_Y);
+//
+//    AK_SND_ONLY_START(KC_I);
+//    R_SND(KC_K, KC_H);
+//    R_SND(KC_H, KC_K);
+//
+//    AK_SND_ONLY_START(KC_K);
+//    R_SND(KC_I, KC_O);
+//    R_SND(KC_O, KC_I);
+//
+//    AK_SND_ONLY_START(KC_L);
+//    R_SND(KC_Y, KC_SLASH);
+//    R_SND(KC_SLASH, KC_Y);
+//
+//    AK_SND_ONLY_START(KC_M);
+//    R_SND(KC_P, KC_F);
+//    R_SND(KC_F, KC_P);
+//
+//    AK_SND_ONLY_START(KC_R);
+//    R_SND(KC_Y, KC_H);
+//    R_SND(KC_H, KC_Y);
+
+// opal
+AK_SND_ONLY_START(KC_QUOT);
+R_SND(KC_MAGIC, KC_R);
+
+AK_SND_ONLY_START(KC_A);
+R_SND(KC_MAGIC, KC_Y);
+
+AK_SND_ONLY_START(KC_H);
+R_SND(KC_MAGIC, KC_R);
