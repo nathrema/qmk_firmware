@@ -1,68 +1,69 @@
+
 // uranium
-    //AK_SND_ONLY_START(KC_N);
-    //R_SND(KC_D, KC_R);
-    //R_SND(KC_R, KC_D);
+    //WHEN(KC_N);
+    //REPLACE(KC_D, KC_R);
+    //REPLACE(KC_R, KC_D);
 
-    //AK_SND_ONLY_START(KC_A);
-    //R_SND(KC_B, KC_E);
-    //R_SND(KC_E, KC_B);
+    //WHEN(KC_A);
+    //REPLACE(KC_B, KC_E);
+    //REPLACE(KC_E, KC_B);
 
-    //AK_SND_ONLY_START(KC_O);
-    //R_SND(KC_COMMA, KC_Y);
-    //R_SND(KC_Y, KC_COMMA);
+    //WHEN(KC_O);
+    //REPLACE(KC_COMMA, KC_Y);
+    //REPLACE(KC_Y, KC_COMMA);
 
-    //AK_SND_ONLY_START(KC_I);
-    //R_SND(KC_V, KC_W);
-    //R_SND(KC_W, KC_V);
+    //WHEN(KC_I);
+    //REPLACE(KC_V, KC_W);
+    //REPLACE(KC_W, KC_V);
 
-    //AK_SND_ONLY_START(KC_U);
-    //R_SND(KC_I, KC_O);
-    //R_SND(KC_O, KC_I);
+    //WHEN(KC_U);
+    //REPLACE(KC_I, KC_O);
+    //REPLACE(KC_O, KC_I);
 
 // selenium
-//    AK_SND_ONLY_START(KC_A);
-//    R_SND(KC_Y, KC_E);
-//    R_SND(KC_E, KC_Y);
+//    WHEN(KC_A);
+//    REPLACE(KC_Y, KC_E);
+//    REPLACE(KC_E, KC_Y);
 //
-//    AK_SND_ONLY_START(KC_U);
-//    R_SND(KC_I, KC_O);
-//    R_SND(KC_O, KC_I);
+//    WHEN(KC_U);
+//    REPLACE(KC_I, KC_O);
+//    REPLACE(KC_O, KC_I);
 //
-//    AK_SND_ONLY_START(KC_C);
-//    R_SND(KC_T, KC_M);
-//    R_SND(KC_M, KC_T);
+//    WHEN(KC_C);
+//    REPLACE(KC_T, KC_M);
+//    REPLACE(KC_M, KC_T);
 
 // amber
-//    AK_SND_ONLY_START(KC_A);
-//    R_SND(KC_Y, KC_E);
-//    R_SND(KC_E, KC_Y);
+//    WHEN(KC_A);
+//    REPLACE(KC_Y, KC_E);
+//    REPLACE(KC_E, KC_Y);
 //
-//    AK_SND_ONLY_START(KC_I);
-//    R_SND(KC_K, KC_H);
-//    R_SND(KC_H, KC_K);
+//    WHEN(KC_I);
+//    REPLACE(KC_K, KC_H);
+//    REPLACE(KC_H, KC_K);
 //
-//    AK_SND_ONLY_START(KC_K);
-//    R_SND(KC_I, KC_O);
-//    R_SND(KC_O, KC_I);
+//    WHEN(KC_K);
+//    REPLACE(KC_I, KC_O);
+//    REPLACE(KC_O, KC_I);
 //
-//    AK_SND_ONLY_START(KC_L);
-//    R_SND(KC_Y, KC_SLASH);
-//    R_SND(KC_SLASH, KC_Y);
+//    WHEN(KC_L);
+//    REPLACE(KC_Y, KC_SLASH);
+//    REPLACE(KC_SLASH, KC_Y);
 //
-//    AK_SND_ONLY_START(KC_M);
-//    R_SND(KC_P, KC_F);
-//    R_SND(KC_F, KC_P);
+//    WHEN(KC_M);
+//    REPLACE(KC_P, KC_F);
+//    REPLACE(KC_F, KC_P);
 //
-//    AK_SND_ONLY_START(KC_R);
-//    R_SND(KC_Y, KC_H);
-//    R_SND(KC_H, KC_Y);
+    WHEN(KC_R);
+    REPLACE(KC_Y, KC_H);
+    REPLACE(KC_H, KC_Y);
 
 // opal
-AK_SND_ONLY_START(KC_QUOT);
-R_SND(KC_MAGIC, KC_R);
+WHEN(KC_QUOT);
+REPLACE(KC_MAGIC, KC_R);
 
-AK_SND_ONLY_START(KC_A);
-R_SND(KC_MAGIC, KC_Y);
+WHEN(KC_A);
+REPLACE(KC_MAGIC, KC_Y);
 
-AK_SND_ONLY_START(KC_H);
-R_SND(KC_MAGIC, KC_R);
+WHEN(KC_H);
+REPLACE(KC_MAGIC, KC_R);

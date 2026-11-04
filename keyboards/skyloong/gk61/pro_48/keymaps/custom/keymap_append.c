@@ -3,25 +3,33 @@
 #    include "keymap.h"
 #endif
 
-
-enum custom_keycodes {
-    KC_ENTER_2, KC_ENTER_3, KC_ENTER_4, KC_ENTER_5
+enum keys {
+	KC_MAGIC = SAFE_RANGE
 };
+uint16_t default_magic = QK_REP;
 
 #include "adaptive_keys.h"
 
-void repeat_keycode(uint16_t keycode, int count) {
-        if (count > 0) {
-            tap_code(keycode);
-            repeat_keycode(keycode, count - 1);
-        }
-};
-
-
+bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
+    return default_magic != QK_REP || keycode != KC_MAGIC;
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_adaptive_key(keycode, record)) { return false; }
 
-    return true;
+    	switch(keycode) {
+		case KC_MAGIC:
+	 	   if (record->event.pressed) {
+			   if (get_repeat_key_count()) {
+	         	   return true;
+	                }
+		   }
+		   repeat_key_invoke(&record->event);
+		   break;
+		default:
+			return true;
+    }
+
+    return false;
 };
 
