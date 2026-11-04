@@ -64,6 +64,7 @@ bool process_adaptive_key(uint16_t keycode, const keyrecord_t *record) {
 
         clear_mods();
         tap_code(second);
+        set_last_keycode(second);
       }
     switch (keycode) {
 #undef AK_BOTH_START
