@@ -6,7 +6,7 @@
 #include "adaptive_keys.h"
 
 void keyboard_post_init_user(void) {
-    set_adaptive_magic_default(QK_REP);
+    set_adaptive_magic_default(KC_1);
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

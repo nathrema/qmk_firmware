@@ -1,10 +1,10 @@
 static uint8_t prior_saved_mods = 0;
 static uint16_t prior_keycode = KC_NO;
-uint16_t adaptive_magic_default = QK_REP;
-int marked_layer = -1;
+static uint16_t adaptive_magic_default = QK_REP;
+static int marked_layer = -1;
 
 enum adaptive_keycodes {
-  KC_ADAPTIVE_MAGIC = SAFE_RANGE
+  KC_ADAPTIVE_MAGIC = SAFE_RANGE,
 };
 
 void set_adaptive_magic_default(uint16_t default_key) {
@@ -31,12 +31,22 @@ bool process_adaptive_magic(uint16_t keycode, const keyrecord_t *record) {
     return true;
 }
 
+uint16_t get_magic_keycode(uint16_t input) {
+    if (input == KC_ADAPTIVE_MAGIC) {
+        if (adaptive_magic_default == QK_REP) {
+            return prior_keycode;
+        }
+        return adaptive_magic_default;
+    }
+    return input;
+}
+
 bool is_marked_layer(int layer) {
     return marked_layer == -1 || marked_layer == layer;
 }
 
 bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
-  bool return_state = true;
+  bool should_process_key = true;
   uint8_t current_layer = get_highest_layer(layer_state | default_layer_state);
 
   if (record->event.pressed) {
@@ -56,15 +66,15 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 #define AK_BOTH_START(key, def_key, layer) \
   default: \
     marked_layer = layer; \
-    return_state = true; \
+    should_process_key = true; \
     tap_code(first); \
     } \
     break; \
   case key: \
     marked_layer = layer; \
     if (is_marked_layer(current_layer)) { \
-     first = def_key; \
-     return_state = false; \
+     first = get_magic_keycode(def_key); \
+     should_process_key = false; \
      } \
     switch (keycode) {
 
@@ -73,7 +83,7 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 
 #define REPLACE(second_key, replaced_key) \
     case second_key: \
-        second = replaced_key; \
+        second = get_magic_keycode(replaced_key); \
         break;
 
 #define SWAP(second_key, replaced_key) \
@@ -82,12 +92,12 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 
 #include "adaptive_keys.def"
         default:
-          return_state = true;
+          should_process_key = true;
           tap_code(first);
         }
       }
 
-      if (return_state) {
+      if (should_process_key) {
             set_mods(saved_mods);
       } else {
         set_mods(prior_saved_mods);
@@ -108,7 +118,7 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 #undef SWAP
 #define AK_BOTH_START(key, ...) \
   case key: \
-    return_state = !is_marked_layer(current_layer) \
+    should_process_key = !is_marked_layer(current_layer) \
     break;
 #define ON(...)
 #define ON_LAYER(...)
@@ -119,7 +129,7 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
     prior_saved_mods = saved_mods;
     prior_keycode = keycode;
   }
-  return return_state;
+  return should_process_key;
 }
 
 #undef AK_BOTH_START
