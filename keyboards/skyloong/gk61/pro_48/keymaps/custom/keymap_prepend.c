@@ -3,35 +3,19 @@
 #    include "keymap.h"
 #endif
 
-enum keys {
-	KC_MAGIC = SAFE_RANGE
-};
-uint16_t default_magic = QK_REP;
-
 #include "adaptive_keys.h"
 
+void keyboard_post_init_user(void) {
+    set_adaptive_magic_default(QK_REP);
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_adaptive_key(keycode, record)) { return false; }
-
-    	switch(keycode) {
-		case KC_MAGIC:
-			if (get_repeat_key_count()) {
-			        return true;
-			}
-
-				repeat_key_invoke(&record->event);
-				return false;
-			break;
-    }
-
+    if (!process_adaptive_swap(keycode, record)) { return false; }
+    if (!process_adaptive_magic(keycode, record)) { return false; }
     return true;
-};
+}
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-    switch (keycode) {
-        case KC_MAGIC:
-            return false;
-    }
-
+    if (!remember_last_key_adaptive(keycode, record, remembered_mods)) { return false; }
     return true;
 }

@@ -3,36 +3,20 @@
 #    include "keymap.h"
 #endif
 
-enum keys {
-	KC_MAGIC = SAFE_RANGE
-};
-uint16_t default_magic = QK_REP;
-
 #include "adaptive_keys.h"
 
+void keyboard_post_init_user(void) {
+    set_adaptive_magic_default(QK_REP);
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_adaptive_key(keycode, record)) { return false; }
-
-    	switch(keycode) {
-		case KC_MAGIC:
-			if (get_repeat_key_count()) {
-			        return true;
-			}
-
-				repeat_key_invoke(&record->event);
-				return false;
-			break;
-    }
-
+    if (!process_adaptive_swap(keycode, record)) { return false; }
+    if (!process_adaptive_magic(keycode, record)) { return false; }
     return true;
-};
+}
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-    switch (keycode) {
-        case KC_MAGIC:
-            return false;
-    }
-
+    if (!remember_last_key_adaptive(keycode, record, remembered_mods)) { return false; }
     return true;
 }
 #include QMK_KEYBOARD_H
@@ -48,7 +32,7 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* reme
  */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_all(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, DF(1), KC_BSPC, KC_B, KC_F, KC_M, KC_P, KC_Z, KC_MINS, KC_J, KC_O, KC_U, KC_K, KC_COMM, KC_COLN, DF(0), KC_ESC, LSFT_T(KC_N), LGUI_T(KC_S), LCTL_T(KC_T), LALT_T(KC_D), KC_W, KC_MAGIC, RALT_T(KC_R), RCTL_T(KC_A), RGUI_T(KC_I), RSFT_T(KC_H), KC_DOT, CW_TOGG, OS_LSFT, KC_Q, KC_V, KC_C, KC_G, KC_ENT, KC_Y, KC_L, KC_U, KC_O, KC_X, OS_RSFT, KC_LCTL, KC_LALT, OSL(5), LT(5,KC_SPC), QK_REP, QK_REP, LT(6,KC_E), OSL(6), KC_RALT, KC_RCTL, KC_RGUI),
+    [0] = LAYOUT_all(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, DF(1), KC_BSPC, KC_B, KC_F, KC_M, KC_P, KC_Z, KC_MINS, KC_J, KC_O, KC_U, KC_K, KC_COMM, KC_COLN, DF(0), KC_ESC, LSFT_T(KC_N), LGUI_T(KC_S), LCTL_T(KC_T), LALT_T(KC_D), KC_W, KC_ADAPTIVE_MAGIC, RALT_T(KC_R), RCTL_T(KC_A), RGUI_T(KC_I), RSFT_T(KC_H), KC_DOT, CW_TOGG, OS_LSFT, KC_Q, KC_V, KC_C, KC_G, KC_ENT, KC_Y, KC_L, KC_U, KC_O, KC_X, OS_RSFT, KC_LCTL, KC_LALT, OSL(5), LT(5,KC_SPC), QK_REP, QK_REP, LT(6,KC_E), OSL(6), KC_RALT, KC_RCTL, KC_RGUI),
     [1] = LAYOUT_all(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, DF(2), KC_TRNS, KC_B, KC_F, KC_M, KC_P, KC_Z, KC_MINS, KC_J, KC_O, KC_U, KC_K, KC_COMM, KC_COLN, KC_TRNS, KC_TRNS, KC_N, KC_S, KC_T, KC_D, KC_W, KC_QUOT, KC_R, KC_A, KC_I, KC_H, KC_DOT, KC_TRNS, KC_TRNS, KC_Q, KC_V, KC_C, KC_G, KC_TRNS, KC_Y, KC_L, KC_U, KC_O, KC_X, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_SPC, KC_TRNS, KC_TRNS, KC_E, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
     [2] = LAYOUT_all(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, DF(3), KC_TRNS, KC_B, KC_L, KC_M, KC_P, KC_Z, KC_Q, KC_K, KC_O, KC_U, KC_Y, KC_DOT, KC_COLN, KC_TRNS, KC_TRNS, KC_N, KC_R, KC_T, KC_D, KC_C, KC_V, KC_S, KC_A, KC_I, KC_H, KC_QUOT, KC_TRNS, KC_TRNS, KC_X, KC_J, KC_W, KC_G, KC_TRNS, KC_Y, KC_F, KC_SLSH, KC_QUES, KC_COMM, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_E, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
     [3] = LAYOUT_all(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, DF(4), KC_TRNS, KC_B, KC_F, KC_M, KC_P, KC_Z, KC_MINS, KC_X, KC_O, KC_U, KC_K, KC_DOT, KC_COLN, KC_TRNS, KC_TRNS, KC_N, KC_S, KC_T, KC_D, KC_C, KC_J, KC_R, KC_A, KC_I, KC_H, KC_QUOT, KC_TRNS, KC_TRNS, KC_Q, KC_V, KC_W, KC_G, KC_TRNS, KC_Y, KC_L, KC_SLSH, KC_QUES, KC_COMM, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_E, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),

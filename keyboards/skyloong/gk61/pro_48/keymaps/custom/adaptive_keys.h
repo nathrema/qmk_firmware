@@ -1,49 +1,84 @@
-// https://www.reddit.com/r/KeyboardLayouts/comments/smnv1o/adaptive_keys_qmk_implementation
-
-
 static uint8_t prior_saved_mods = 0;
 static uint16_t prior_keycode = KC_NO;
+uint16_t adaptive_magic_default = QK_REP;
+int marked_layer = -1;
 
+enum adaptive_keycodes {
+  KC_ADAPTIVE_MAGIC = SAFE_RANGE
+};
 
-bool process_adaptive_key(uint16_t keycode, const keyrecord_t *record) {
+void set_adaptive_magic_default(uint16_t default_key) {
+    adaptive_magic_default = default_key;
+}
+
+bool process_adaptive_magic(uint16_t keycode, const keyrecord_t *record) {
+      switch(keycode) {
+    case KC_ADAPTIVE_MAGIC:
+      if (adaptive_magic_default == QK_REP) {
+        if (get_repeat_key_count()) {
+                return true;
+        }
+        repeat_key_invoke(&record->event);
+        return false;
+      } else {
+        if (record->event.pressed) {
+          tap_code16(adaptive_magic_default);
+          return false;
+        }
+      }
+      break;
+    }
+    return true;
+}
+
+bool is_marked_layer(int layer) {
+    return marked_layer == -1 || marked_layer == layer;
+}
+
+bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
   bool return_state = true;
+  uint8_t current_layer = get_highest_layer(layer_state | default_layer_state);
 
   if (record->event.pressed) {
     uint8_t saved_mods = get_mods();
     if (saved_mods & MOD_MASK_CAG) {
-      // don't interfere if modifiers are involved
       return true;
     }
-      return_state = true;
       unregister_code(KC_LSFT);
       unregister_code(KC_RSFT);
       keycode = keycode & 0xFF;
       uint16_t first = KC_NO;
       uint16_t second = KC_NO;
 
-
       switch (prior_keycode) {
       case KC_NO:
         switch (keycode) {
-
-#define AK_BOTH_START(key, def_key)                                            \
-  default:                                                                     \
-    return_state = true;                                                       \
-    tap_code(first);                                                           \
-    }                                                                          \
-    break;                                                                     \
-  case key:                                                                    \
-        first = def_key;                                                           \
-        return_state = false;                                                      \
+#define AK_BOTH_START(key, def_key, layer) \
+  default: \
+    marked_layer = layer; \
+    return_state = true; \
+    tap_code(first); \
+    } \
+    break; \
+  case key: \
+    marked_layer = layer; \
+    if (is_marked_layer(current_layer)) { \
+     first = def_key; \
+     return_state = false; \
+     } \
     switch (keycode) {
 
-#define WHEN(key) AK_BOTH_START(key, KC_NO)
+#define ON_LAYER(layer, key) AK_BOTH_START(key, KC_NO, layer)
+#define ON(key) AK_BOTH_START(key, KC_NO, -1)
 
 #define REPLACE(second_key, replaced_key) \
     case second_key: \
         second = replaced_key; \
         break;
 
+#define SWAP(second_key, replaced_key) \
+    REPLACE(second_key, replaced_key) \
+    REPLACE(replaced_key, second_key)
 
 #include "adaptive_keys.def"
         default:
@@ -62,28 +97,42 @@ bool process_adaptive_key(uint16_t keycode, const keyrecord_t *record) {
             add_weak_mods(MOD_BIT(KC_LSFT));
         }
 
-        clear_mods();
         tap_code(second);
         set_last_keycode(second);
       }
     switch (keycode) {
 #undef AK_BOTH_START
-#undef WHEN
+#undef ON_LAYER
+#undef ON
 #undef REPLACE
-#define AK_BOTH_START(key, ...)                                                \
-  case key:                                                                    \
-    return_state = false;                                                      \
+#undef SWAP
+#define AK_BOTH_START(key, ...) \
+  case key: \
+    return_state = !is_marked_layer(current_layer) \
     break;
-#define WHEN(...)
+#define ON(...)
+#define ON_LAYER(...)
 #define REPLACE(...)
+#define SWAP(...)
 #include "adaptive_keys.def"
     }
     prior_saved_mods = saved_mods;
-    prior_keycode = keycode;        // this keycode is stripped of mods+taps
+    prior_keycode = keycode;
   }
   return return_state;
 }
 
 #undef AK_BOTH_START
-#undef WHEN
+#undef ON_LAYER
+#undef ON
 #undef REPLACE
+#undef SWAP
+
+bool remember_last_key_adaptive(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
+    switch (keycode) {
+        case KC_ADAPTIVE_MAGIC:
+            return false;
+    }
+
+    return true;
+}

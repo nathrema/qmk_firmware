@@ -41,7 +41,7 @@
       "LCTL_T(KC_T)",
       "LALT_T(KC_D)",
       "KC_W",
-      "ANY(KC_MAGIC)",
+      "ANY(KC_ADAPTIVE_MAGIC)",
       "RALT_T(KC_R)",
       "RCTL_T(KC_A)",
       "RGUI_T(KC_I)",

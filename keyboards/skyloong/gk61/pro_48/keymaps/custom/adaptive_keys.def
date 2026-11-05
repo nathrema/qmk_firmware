@@ -1,69 +1,70 @@
 
 // uranium
-    //WHEN(KC_N);
+    //ON_LAYER(KC_N);
     //REPLACE(KC_D, KC_R);
     //REPLACE(KC_R, KC_D);
 
-    //WHEN(KC_A);
+    //ON_LAYER(KC_A);
     //REPLACE(KC_B, KC_E);
     //REPLACE(KC_E, KC_B);
 
-    //WHEN(KC_O);
+    //ON_LAYER(KC_O);
     //REPLACE(KC_COMMA, KC_Y);
     //REPLACE(KC_Y, KC_COMMA);
 
-    //WHEN(KC_I);
+    //ON_LAYER(KC_I);
     //REPLACE(KC_V, KC_W);
     //REPLACE(KC_W, KC_V);
 
-    //WHEN(KC_U);
+    //ON_LAYER(KC_U);
     //REPLACE(KC_I, KC_O);
     //REPLACE(KC_O, KC_I);
 
 // selenium
-//    WHEN(KC_A);
+//    ON_LAYER(KC_A);
 //    REPLACE(KC_Y, KC_E);
 //    REPLACE(KC_E, KC_Y);
 //
-//    WHEN(KC_U);
+//    ON_LAYER(KC_U);
 //    REPLACE(KC_I, KC_O);
 //    REPLACE(KC_O, KC_I);
 //
-//    WHEN(KC_C);
+//    ON_LAYER(KC_C);
 //    REPLACE(KC_T, KC_M);
 //    REPLACE(KC_M, KC_T);
 
 // amber
-//    WHEN(KC_A);
+//    ON_LAYER(KC_A);
 //    REPLACE(KC_Y, KC_E);
 //    REPLACE(KC_E, KC_Y);
 //
-//    WHEN(KC_I);
+//    ON_LAYER(KC_I);
 //    REPLACE(KC_K, KC_H);
 //    REPLACE(KC_H, KC_K);
 //
-//    WHEN(KC_K);
+//    ON_LAYER(KC_K);
 //    REPLACE(KC_I, KC_O);
 //    REPLACE(KC_O, KC_I);
 //
-//    WHEN(KC_L);
+//    ON_LAYER(KC_L);
 //    REPLACE(KC_Y, KC_SLASH);
 //    REPLACE(KC_SLASH, KC_Y);
 //
-//    WHEN(KC_M);
+//    ON_LAYER(KC_M);
 //    REPLACE(KC_P, KC_F);
 //    REPLACE(KC_F, KC_P);
 //
-    WHEN(KC_R);
-    REPLACE(KC_Y, KC_H);
-    REPLACE(KC_H, KC_Y);
+    ON(KC_R);
+    SWAP(KC_Y, KC_H);
 
+    ON_LAYER(KC_M, 0);
+    SWAP(KC_F, KC_B);
 // opal
-WHEN(KC_QUOT);
-REPLACE(KC_MAGIC, KC_R);
+ON_LAYER(KC_A, 0);
+REPLACE(KC_ADAPTIVE_MAGIC, KC_Y);
 
-WHEN(KC_A);
-REPLACE(KC_MAGIC, KC_Y);
+ON_LAYER(KC_H, 0);
+REPLACE(KC_ADAPTIVE_MAGIC, KC_R);
 
-WHEN(KC_H);
-REPLACE(KC_MAGIC, KC_R);
+ON_LAYER(KC_P, 0);
+REPLACE(KC_ADAPTIVE_MAGIC, KC_R);
