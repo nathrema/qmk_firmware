@@ -55,11 +55,12 @@
 //    REPLACE(KC_F, KC_P);
 //
 
-ON(KC_J);
+ON_LAYER(0, KC_J);
 SWAP(KC_ADAPTIVE_MAGIC, KC_O);
+SWAP(KC_1, KC_2);
 
-//ON(KC_R);
-//SWAP(KC_Y, KC_H);
+ON(KC_R);
+SWAP(KC_Y, KC_H);
 //
 //ON_LAYER(0, KC_M);
 //SWAP(KC_F, KC_B);
