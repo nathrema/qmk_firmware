@@ -12,7 +12,7 @@ void set_adaptive_magic_default(uint16_t default_key) {
 }
 
 bool should_process_key_adaptive(uint16_t keycode) {
-    return !(keycode == KC_LCTL || keycode == KC_RCTL || keycode == KC_LGUI || keycode == KC_RGUI || keycode == KC_LALT || keycode == KC_RALT || keycode == KC_LSFT || keycode == KC_RSFT || keycode == KC_CAPS || keycode == KC_SCRL || keycode == KC_PSCR || keycode == KC_NUM || keycode == CW_TOGG || keycode == OS_LSFT || keycode == OS_RSFT);
+    return !(keycode == KC_LCTL || keycode == KC_RCTL || keycode == KC_LGUI || keycode == KC_RGUI || keycode == KC_LALT || keycode == KC_RALT || keycode == KC_LSFT || keycode == KC_RSFT || keycode == KC_CAPS || keycode == KC_SCRL || keycode == KC_PSCR || keycode == KC_NUM || keycode == CW_TOGG || keycode == OS_LSFT || keycode == OS_RSFT || keycode == KC_CAPS);
 }
 
 bool process_adaptive_magic(uint16_t keycode, const keyrecord_t *record) {
@@ -56,10 +56,7 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
   uint8_t current_layer = get_highest_layer(layer_state | default_layer_state);
 
   if (record->event.pressed) {
-    uint8_t saved_mods = get_mods();
-    if (saved_mods & MOD_MASK_CAG) {
-      return true;
-    }
+      uint8_t saved_mods = get_mods();
       unregister_code(KC_LSFT);
       unregister_code(KC_RSFT);
       uint16_t keycode_base = keycode & 0xFF;
@@ -120,6 +117,9 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 #endif
 
         tap_code_adaptive(second, record);
+	if (second == OS_LSFT || second == OS_RSFT) {
+		add_oneshot_mods(MOD_BIT(KC_LSFT));
+	}
 	if (second != KC_ADAPTIVE_MAGIC) {
         	set_last_keycode(second);
 	}
@@ -140,7 +140,7 @@ bool process_adaptive_swap(uint16_t keycode, const keyrecord_t *record) {
 #define SWAP(...)
 #include "adaptive_keys.def"
     }
-    prior_saved_mods = saved_mods;
+    prior_saved_mods = get_mods();
     prior_keycode = keycode;
   }
   return should_process_key;

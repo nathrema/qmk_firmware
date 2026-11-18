@@ -5,10 +5,14 @@
 
 #include "../adaptive_keys.h"
 
-const uint16_t PROGMEM punc_layer_combo[] = {KC_SPC, KC_E, COMBO_END};
+const key_override_t semicolon_colon_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COLN, KC_SCLN);
+const key_override_t slash_question_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_SLSH);
+const key_override_t quote_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DQUO, KC_QUOT);
 
-combo_t key_combos[] = {
-  COMBO(punc_layer_combo, OSL(5))
+const key_override_t *key_overrides[] = {
+    &semicolon_colon_key_override,
+    &slash_question_key_override,
+    &quote_key_override
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
